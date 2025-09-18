@@ -16,7 +16,7 @@ func setup() [][]int {
 		os.Chdir("..")
 	}
 	input := utils.FetchTestInput(1)
-	parser := advent_of_gode_utils.ColumnIntParser{Input: input}
+	parser := advent_of_gode_utils.ColumnIntParser{BaseParser: advent_of_gode_utils.BaseParser{Input: input}}
 	columns := parser.GetInts("   ")
 	sort.Ints(columns[0])
 	sort.Ints(columns[1])
