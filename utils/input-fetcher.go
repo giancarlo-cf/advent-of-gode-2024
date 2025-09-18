@@ -28,10 +28,22 @@ func FetchInput(year int, day int) string {
 		log.Fatalf("Error fetching input: %v", err)
 	}
 
+	if err := os.MkdirAll("inputs", 0755); err != nil {
+		log.Fatalf("Error creating inputs directory: %v", err)
+	}
 	err = os.WriteFile(fmt.Sprintf("inputs/%d.txt", day), []byte(input), 0644)
 	if err != nil {
 		log.Fatalf("Error saving input file: %v", err)
 	}
 
 	return input
+}
+
+func FetchTestInput(day int) string {
+	inputFile := fmt.Sprintf("inputs/%d_test.txt", day)
+	data, err := os.ReadFile(inputFile)
+	if err != nil {
+		log.Fatalf("Error reading test input file: %v", err)
+	}
+	return string(data)
 }
