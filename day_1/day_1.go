@@ -6,7 +6,7 @@ import (
 	"sort"
 
 	"github.com/giancarlo-cf/advent-of-gode-2024/utils"
-	advent_of_gode_utils "github.com/giancarlo-cf/advent-of-gode-utils"
+	"github.com/giancarlo-cf/advent-of-gode-utils"
 )
 
 func main() {
