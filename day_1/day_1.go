@@ -11,7 +11,7 @@ import (
 
 func main() {
 	input := utils.FetchInput(2024, 1)
-	parser := advent_of_gode_utils.ColumnIntParser{input}
+	parser := advent_of_gode_utils.ColumnIntParser{Input: input}
 	columns := parser.GetInts("   ")
 	sort.Ints(columns[0])
 	sort.Ints(columns[1])
