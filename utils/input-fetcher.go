@@ -47,3 +47,12 @@ func FetchTestInput(day int) string {
 	}
 	return string(data)
 }
+
+func FetchSpecialTestInput(day int) string {
+	inputFile := fmt.Sprintf("inputs/%d_test_2.txt", day)
+	data, err := os.ReadFile(inputFile)
+	if err != nil {
+		log.Fatalf("Error reading test input file: %v", err)
+	}
+	return string(data)
+}
