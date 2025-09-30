@@ -6,12 +6,12 @@ import (
 	"sort"
 
 	"github.com/giancarlo-cf/advent-of-gode-2024/utils"
-	"github.com/giancarlo-cf/advent-of-gode-utils"
+	"github.com/giancarlo-cf/advent-of-gode-utils/parsers"
 )
 
 func main() {
 	input := utils.FetchInput(2024, 1)
-	parser := advent_of_gode_utils.ColumnIntParser{BaseParser: advent_of_gode_utils.BaseParser{Input: input}}
+	parser := parsers.ColumnIntParser{BaseParser: parsers.BaseParser{Input: input}}
 	columns := parser.GetInts("   ")
 	sort.Ints(columns[0])
 	sort.Ints(columns[1])

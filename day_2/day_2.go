@@ -4,12 +4,12 @@ import (
 	"fmt"
 
 	"github.com/giancarlo-cf/advent-of-gode-2024/utils"
-	"github.com/giancarlo-cf/advent-of-gode-utils"
+	"github.com/giancarlo-cf/advent-of-gode-utils/parsers"
 )
 
 func main() {
 	input := utils.FetchInput(2024, 2)
-	parser := advent_of_gode_utils.RowIntParser{BaseParser: advent_of_gode_utils.BaseParser{Input: input}}
+	parser := parsers.RowIntParser{BaseParser: parsers.BaseParser{Input: input}}
 	rows := parser.GetInts(" ")
 
 	fmt.Printf("Part One: %d\n", PartOne(rows))
